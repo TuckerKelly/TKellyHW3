@@ -1,0 +1,190 @@
+\documentclass[11pt]{article}
+%%% style file you will need for some commands%%%%%%%%%%%%%%%%%%%%%%
+%% aahomework is the style file I have used to typeset many commands, feel free to use them in your solutions.
+%% bear in mind that if you need to define your command then you will have to make sure that it is not in conflict to my pre-defined command. Otherwise you will need to either use
+%% commands defined by me or edit the style file appropriately.
+
+%%%\usepackage{anurag}
+\usepackage{aahomework}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+%%the \circled command has been used to create text inside circle for grading table.
+
+%%%\geometry{letterpaper, textwidth=17cm, textheight=22cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THE FOLLOWING IS FOR THE COVER SHEET--FILL IN appropriately%%
+\newcommand{\mycourse}{MATH-200}
+\newcommand{\semesteryear}{Fall 2018}
+\newcommand{\myname}{TYPE YOUR NAME here}  %%TYPE in YOUR NAME HERE  <<<<<<<<<<<<<<<|========================================= (PLEASE PUT YOUR NAME HERE)==========
+\newcommand{\hwnumber}{3} %%TYPE in the HW  number 1,2,3,.. HERE  <<<<<<<<<<<<<<<|========================================= (PLEASE PUT the HW number here)==========
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% cover sheet preamble ends here
+
+%%%%%%%%FOLLOWING counter IS TO AUTOMATE THE NUMBERING OF THE PROBLEMS%%%%%%%%%%%%%
+\newcounter{Quesnumb}  %% this creates the counter
+\setcounter{Quesnumb}{0} %% this sets a specific value to the counter
+%%%%%% the following new command can be used to increment and print the counter  http://chenfuture.wordpress.com/2007/12/31/a-simple-counter/
+\newcommand{\problemnum}{%
+            \addtocounter{Quesnumb}{1}%
+            \arabic{Quesnumb}}
+
+
+%%%% following is NOT TO BE EDITED, DO NOT TYPE ANYTHING HERE, it will receive inputs from what you fill above%%%%%%%%%%%%%%%%%%
+\title{\textbf{\mycourse} \hfill Homework \hwnumber \hfill \textbf{\semesteryear}} %% DO NOT type in HW number here
+\author{\myname} %% DO NOT type in your name here.
+\date{ \textbf{DUE DATE October 08, 2018 {\red by 11:00PM (in \textsc{Dropbox})}}} %% DO NOT TYPE in mycourse and/or quarteryear values
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0pt} %% paragraphs will not be indented
+\setlength{\parskip}{.25cm} %% space between paragraphs
+\linespread{1.1}
+
+\begin{document}
+\thispagestyle{empty} %%this is to supress the page number on the cover page
+\include{hwcover} %% make sure you have the file "hwcover.tex" in the same folder as your actual homework file
+\renewcommand{\arraystretch}{1} %% this is to make sure that array stretch in "hwcover" is nuetralized.
+
+\clearpage %% these are to reset the page number for the first page of your homework to 1.
+\pagenumbering{arabic} %% these are to reset the page number for the first page of your homework to 1.
+\textbf{Some instructions:}
+\begin{itemize}
+    \item Please follow the instructions for homework submission that are given in the syllabus and on the HW webpage.
+    %%%\item Do not forget \textbf{to staple your HW and attach the cover sheet}.
+    \item In the questions given below \textsf{\bf BLOCH 1.4.18} refers to Bloch's book section 1.4, problem no. 18.
+    \item Please use the \LaTeX~ file that I have provided on the homework page to typeset your homework.
+    \item Please name the files as follows: Suppose Carl F. Gauss was submitting HW \#\hwnumber, then the files should be named as \textit{CGaussHW\hwnumber.tex} and \textit{CGaussHW\hwnumber.pdf}.
+    \item \LaTeX{} users:
+        \begin{itemize}
+            \item Please upload both the \LaTeX and PDF files and follow the instructions written above for naming the files.
+            \item Use the {\blue ``problem'' environment} for questions and the {\blue ``solution'' environment} to type the solutions. For example
+            {\magenta
+            \begin{verbatim}
+                 \begin{solution}
+                     You can start typing your solution here.........
+                 \end{solution}
+            \end{verbatim}
+            }
+             will give you the following output:
+
+                \begin{solution}
+                You can start typing your solution here.........
+                \end{solution}
+
+    \item For writing proofs you can use the following \LaTeX~ environment
+                {\blue
+                \begin{verbatim}
+                    \begin{proof}
+                    My first proof is quite awesome
+                    \end{proof}
+                \end{verbatim}
+                }
+                It will give you the following
+                \begin{proof}
+                 My first proof is quite awesome
+                \end{proof}
+        \end{itemize}
+\end{itemize}
+\newpage
+\begin{center}
+\textbf{\blue For writing proofs:}
+\end{center}
+\begin{itemize}
+    \item Declare what kind of proof you are going to use.
+    \item In case you are proving an equivalent statement then before you prove anything first state that equivalent statement and justify why your statement is equivalent to the statement given in the problem.
+    \item You should use complete sentences in English to express each step.
+    \item Your proof should read like a paragraph and not a bulleted list, i.e. the sentences should have a flow and structure.
+    \item Avoid using quantifiers within the sentences, i.e. instead of writing: ``$\exists x \in \bbR$ such that $\ldots$'', you should write ``there exists a real number $x$ such that $\ldots$.''
+\end{itemize}
+%%\vspace*{0.3cm}
+\newpage
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% YOU MAY START TYPING YOUR ANSWERS BELOW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: In my style file aaHWbeginner.sty I have defined two environments "problem" and "solution" that can be used to type in your question and answer respectively as shown below.%%
+\begin{problem}{\problemnum}
+    Suppose $x \in \bbR$. Prove that if $x^5+7x^3+5x \geq x^4+x^2+8$, then $x \geq 0$.
+                    \begin{proof}
+                    We will use the Contrapositive Method. We assume that x is less than 0. We are trying to prove that the inequality $x^5+7x^3+5x < x^4+x^2+8$ exists. All possible values of x are negative therefore the terms x^5, x^7, and x will all be negative, making their sum also negative. For the terms x^4 and x^2 will both be positive, making their sum also positive. A negative number is less than a positive number thus proving the inequality $x^5+7x^3+5x < x^4+x^2+8$
+                    \end{proof}
+\end{problem}
+
+\begin{problem}{\problemnum}
+Let $n$ be an integer. Prove that if $n$ is odd then $8$ divides $n^2+(n+6)^2+6$.
+\end{problem}
+
+\begin{problem}{\problemnum}
+\begin{tcolorbox}[colback=red!10!white, colframe=red!50!blue, title=Linear combinations and divisibility, center title]
+\begin{define} Let $s$ and $t$ be two integers. All numbers of the form $sx+ty$, where $x,y \in \bbZ$ are called \textbf{linear combinations} of $s$ and $t$.
+\end{define}
+
+\begin{theorem}
+\label{thmCD}
+If $a$ is a \textbf{common divisor} of $b$ and $c$, then it divides any integer linear combination of $b$ and $c$ as well.
+\end{theorem}
+\end{tcolorbox}
+\begin{enumerate}[label=\alph*).]
+\item Prove theorem \ref{thmCD}.
+\item Using Theorem \ref{thmCD}, show that there \textbf{does not exist} any integer $n$ such that $5$ divides both $2n+1$ and $n+17$.
+\item Let $n$ be an integer. Suppose an integer $d$ is a common divisor of the integers $2n+3$ and $5n+7$. Then use Theorem \ref{thmCD} to show that $d=\pm 1$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\problemnum}
+A rational number of the form $\dfrac{a}{2^n}$, where $a \in \bbZ$ and $n \in \bbN$ (here $\bbN$ is the set of natural numbers or positive integers) is called a \textbf{diadic rational}. Let $D$ be the set of all diadic rational numbers.
+\begin{enumerate}[label=\alph*).]
+    \item Is the set $D$ closed under addition? Prove or find a counterexample.
+    \item Is the set $D$ closed under multiplication? Prove or find a counterexample.
+    \item Is the set of \textbf{non-zero} diadic rationals closed under division? Prove or find a counter example.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{\problemnum}
+Let $a$ be an irrational number, let $r$ be a \textbf{nonzero} rational
+number. Prove that at least one of $(ar+\sqrt{2})$ or $(ar-\sqrt{2})$ is an irrational number.
+\end{problem}
+
+\begin{problem}{\problemnum}
+    Show that for every positive integer $a$ there exists a positive integer $b$ such that $ab+49$ is a perfect square.\\
+    \textsf{NOTE:} By a perfect square we mean the square of an integer. For example, with $a=5$ we can choose $b=19$, then $ab+49=144=12^2$.
+\end{problem}
+
+\begin{problem}{\problemnum}
+\begin{tcolorbox}[colback=red!10!white, colframe=red!50!blue, title=Euclid's division algorithm \& Congruences, center title]
+\begin{theorem}[\textbf{\blue The Division algorithm}]
+Let $m \in \bbZ$ and $n \in \bbZ^{+}$ (positive integers or natural numbers). Then there exist \textbf{unique} integers $q$ (called the \textbf{quotient}) and $r$ (called the \textbf{remainder}) such that the following conditions are satisfied
+\[m=qn+r \qquad \text{ and } \qquad 0 \leq r <n.\]
+\end{theorem}
+\begin{define}[\textbf{\blue Congruence} (see \textbf{section 5.2} of Bloch's textbook)]
+Let $a$ and $b$ be integers, and $n \in \bbZ^{+}$. We say that \textbf{$a$ is congruent to $b$ modulo $n$} and write
+\[a \equiv b \pmod{n}\]
+if $a$ and $b$ have the \textbf{same remainder} upon dividing by $n$ (in other words, $a$ and $b$ belong to the same remainder class when divided by $n$).
+\end{define}
+
+%%%We also saw the following equivalent criterion for $\tcboxmath{a\equiv b \pmod{n}}$:
+\begin{theorem}
+    $a \equiv b \pmod{n}$ if and only if $n$ divides the difference of $a$ and $b$.
+\end{theorem}
+\end{tcolorbox}
+\colorbox{yellow}{\textsf{NOTE:}} Let $a \in \bbZ$ and $n \in \bbZ^{+}$. From the theorems and definitions given above we can infer:
+    \begin{itemize}
+        \item $a$ is congruent to \textbf{exactly one} of the integers $0,1,2, \ldots, n-1$ modulo $n$, i.e. $a$ belongs to exactly one remainder class modulo $n$.
+        \item $a$ is divisible by $n$ if and only if $a \equiv 0 \pmod{n}$.
+        \item $a$ is not divisible by $n$ if and only if $a \equiv r \pmod{n}$, where $r \in \{1,2,3, \ldots ,n-1\}$.
+    \end{itemize}
+\begin{enumerate}[label=\alph*).]
+\item Which of the following statements are true for an integer $a$? Give a justification.
+    \begin{enumerate}[label=\roman*).]
+        \item If $a \equiv 8 \pmod{6}$, then $a \equiv 2 \pmod{3}$.
+        \item If $a \equiv 2 \pmod{3}$, then $a \equiv 8 \pmod{6}$.
+    \end{enumerate}
+
+\item Suppose $a,b,c,d$ are integers, such that $a \equiv b \pmod{n}$ and $c \equiv d \pmod{n}$. Show that $ac \equiv bd \pmod{n}$.\\
+\colorbox{yellow}{\textsf{NOTE:}} This result tells us that we can multiply two congruences with each other as long as they are with regards to the same modulus.
+
+\item Using congruences, show that for any integer $n$, the quantity $n^3-4n$ is divisible by $3$. (\textsf{Hint:} For an integer $n$, by division algorithm it follows that $n \equiv r \pmod{3}$, where $r$ can be .....)
+\end{enumerate}
+\end{problem}
+
+\end{document}

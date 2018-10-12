@@ -1,0 +1,78 @@
+%%%\documentclass[12pt]{article}
+%%%\usepackage{anurag}
+%%%%%\usepackage{aahomework}
+%%%\usepackage{tikz}
+%%%\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+%%%            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+%%%%%%the \circled command has been used to create text inside circle for grading table.
+%%%%%\usepackage{graphicx}
+%%%%%\usepackage{bbding}
+%%%%%\geometry{textwidth=18cm,textheight=22cm}
+%%%
+%%%\pagestyle{empty}
+%%%%\linespread{1.05}
+%%%
+%%%\begin{document}
+
+
+\begin{minipage}{6in}
+    {\Large \mycourse \hfill Dr. Agarwal \hfill \semesteryear}
+    \begin{center}
+    %\textsf{\large Cover Sheet for HW}\\
+%    \vspace*{0.3cm}
+    \begin{tabular}{lcc}
+    \toprule[2pt]
+    \multicolumn{3}{c}{\bfseries Please fill in appropriately}\\ \toprule[2pt]
+    {\sc Print Name:} &  \myname & \\ \addlinespace[0.4cm] \midrule %%\addlinespace adds some width between two successive rows see booktabs package
+    %{\sc Circle section number:} & \large{\textbf{Sec 02}} & \large{\textbf{Sec 04}}\\ \addlinespace[0.4cm]  \midrule
+    {\sc Assignment \#:} & \hwnumber&\\
+    \bottomrule[2pt]
+    \end{tabular}
+    \end{center}
+\end{minipage}
+\vspace*{0.3cm}
+
+%% for \parbox options see Kopka page 522 and page 628 of Mittelbach and Goossens
+%\begin{center}
+%\fbox{\parbox[][1cm][c]{10cm}{\sc \Large Print Name:}}
+%\end{center}
+
+\textbf{Read the instructions below:}
+\begin{itemize}
+    %%\item \textsf{STAPLE} your homework.
+    \item Solutions should be supported with reasons. Just writing the final answer is not enough.
+    \item All PROOFS should be written using full sentences. %Mark the end of each proof by $\qedsymbol$.
+    %%\item Before submission please make a copy of your homework for your personal use.
+    \item Please upload both the \LaTeX and PDF files and follow the instructions posted on HW page about naming the files.
+\end{itemize}
+
+%%%for the \circled command used below see the file hw_template.tex. I have used TikZ to do this.
+
+\renewcommand{\arraystretch}{0.9}
+\begin{center}
+\begin{tabular}{lc|lc}
+  \toprule[2pt]
+  % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
+  \multicolumn{4}{c}{\bfseries For Grading Only}\\ \toprule[2pt]
+  \multicolumn{4}{c}{\bfseries Completion Points  \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0}}\\ \toprule[2pt]
+  \#1 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0} &
+    \#9 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0}\\\midrule
+  \#2 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0} &
+    \#10 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0}\\\midrule
+  \#3 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0} &
+    \#11 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0}\\\midrule
+  \#4 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0} &
+    \#12 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0}\\\midrule
+  \#5 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0} &
+    \#13 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0}\\\midrule
+  \#6 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0} &
+    \#14 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0}\\\midrule
+  \#7 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0} &
+    \#15 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0}\\\midrule
+  \#8 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0} &
+    \#16 & \circled{5} \hspace*{0.2cm} \circled{4} \hspace*{0.2cm} \circled{3} \hspace*{0.2cm} \circled{2} \hspace*{0.2cm} \circled{0}\\\midrule
+    \addlinespace[0.1cm]
+  \multicolumn{4}{l}{\bfseries Total}\\ \bottomrule[2pt]
+\end{tabular}
+\end{center}
+%%%%%%%\end{document}
